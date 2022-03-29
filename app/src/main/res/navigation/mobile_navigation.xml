@@ -3,23 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_course">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.cjl.cjlchaoxing.ui.course.CourseFragment"
+        android:id="@+id/nav_course"
+        android:name="com.cjl.cjlchaoxing.ui.CourseFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_course" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.cjl.cjlchaoxing.ui.log.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_sign"
+        android:name="com.cjl.cjlchaoxing.ui.SignFragment"
+        android:label="@string/menu_sign"
+        tools:layout="@layout/fragment_sgin"/>
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.cjl.cjlchaoxing.ui.exam.SlideshowFragment"
+        android:id="@+id/nav_task"
+        android:name="com.cjl.cjlchaoxing.ui.TaskFragment"
+        android:label="@string/menu_task"
+        tools:layout="@layout/fragment_task" />
+
+    <fragment
+        android:id="@+id/nav_exam"
+        android:name="com.cjl.cjlchaoxing.ui.ExamFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_exam" />
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.cjl.cjlchaoxing.ui.SetFragment"
+        android:label="@string/menu_setting"
+        tools:layout="@layout/fragment_setting"/>
+
 </navigation>

@@ -107,9 +107,12 @@ public class MainActivity extends AppCompatActivity implements Informationn {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home,
-                R.id.nav_gallery,
-                R.id.nav_slideshow)
+                R.id.nav_course,
+                R.id.nav_sign,
+                R.id.nav_task,
+                R.id.nav_exam,
+                R.id.nav_setting
+        )
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main2);
@@ -139,9 +142,6 @@ public class MainActivity extends AppCompatActivity implements Informationn {
                 break;
             case R.id.action_back_login:
                 Toast.makeText(this,"点击了退出登录",Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.action_back:
-                Toast.makeText(this, "点击了退出", Toast.LENGTH_SHORT).show();
                 break;
             default:
                 break;
