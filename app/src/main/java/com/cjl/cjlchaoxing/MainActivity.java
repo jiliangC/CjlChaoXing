@@ -20,6 +20,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.cjl.cjlchaoxing.cookies.GetCookies;
 import com.cjl.cjlchaoxing.databinding.ActivityMain2Binding;
 import com.cjl.cjlchaoxing.get_url_img.ImageService;
 import com.google.android.material.navigation.NavigationView;
@@ -34,13 +35,14 @@ import okhttp3.Response;
 public class MainActivity extends AppCompatActivity implements Informationn {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private String cookies;
+    private static String cookies;
     private final OkHttpClient okHttpClient = new OkHttpClient();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.cookies = LoginActivity.cookies;
+        cookies = new GetCookies().getCookies();
 
         new Thread() {
             @SuppressLint("SetTextI18n")

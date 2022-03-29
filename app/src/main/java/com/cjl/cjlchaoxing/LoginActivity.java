@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.cjl.cjlchaoxing.cookies.GetCookies;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.io.IOException;
@@ -70,6 +71,7 @@ public class LoginActivity extends AppCompatActivity implements Informationn {
                     String cookies_chip = cookie.toString().split(";")[0] + ";";
                     cookies += cookies_chip;
                 }
+                new GetCookies().setCookies(cookies);
             }
 
             @NonNull
